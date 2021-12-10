@@ -41,6 +41,8 @@ export class Counter {
     }
 
     this.isblocked = true;
+    // only one request at a time should be able to make a fetch
+
     // dummy http endpoint that blocks for 10 seconds before responding: https://ehrig.io/sleep/?l=10
     // query parameters are proxied as is
     let response = await fetch(`https://ehrig.io/sleep/${search}`);
